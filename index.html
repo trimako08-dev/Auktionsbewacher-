@@ -1054,7 +1054,7 @@
                 };
                 
                 // Generiere funktionierenden Link
-                fallbackProduct.link = this.generateWorkingAuctionLink(fallbackProduct);
+                fallbackProduct.link = product.link;
                 
                 return fallbackProduct;
             },
@@ -1182,7 +1182,7 @@
             
             verifyAuctionLink: function(product) {
                 // Generiere funktionierenden Link basierend auf echten Auktionsseiten
-                const workingLink = this.generateWorkingAuctionLink(product);
+                const workingLink = product.link;
                 
                 if (product.link !== workingLink) {
                     console.log(`🔧 Creating working link for ${product.name}`);
